@@ -1,19 +1,20 @@
-const loadFood = mealFood =>{
+const loadFood = (mealFood, itemCount) =>{
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealFood}`;
     fetch(url)
     .then(res => res.json())
-    .then(data => displayFood(data.meals))
+    .then(data => displayFood(data.meals, itemCount))
 }
+loadFood('', 6)
 
-const displayFood = foods=>{
-    const foodContainer = document.getElementById('food-container')
+const displayFood = (foods, itemCount)=>{
+    if(itemCount){
+        foods = foods.slice(0, itemCount)
+    }
+    const foodContainer = document.getElementById('food-container');
     foodContainer.innerHTML = ''
     foods.map(food=>{
-        console.log(food)    
         const foodDiv = document.createElement('div');
-        // console.log(foodDiv);
-        foodDiv.classList.add('col');
-        foodDiv.classList.add('px-4')
+        foodDiv.classList.add('col', 'px-4');
         foodDiv.innerHTML= `
         <div class="row align-items-center border rounded-2 shadow-sm">
             <img src="${food.strMealThumb}" class="img-fluid rounded-start col-md-4 ps-0" alt="...">
@@ -39,7 +40,7 @@ const searchText = () =>{
 }
 
 const loadFoodDetails= detailFood=>{
-    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772`;
+    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${detailFood}`;
     fetch(url)
     .then(res => res.json())
     .then(data => displayFoodModal(data.meals))
@@ -47,7 +48,6 @@ const loadFoodDetails= detailFood=>{
 const displayFoodModal = (details)=>{
     const foodBody = document.getElementById('food-modal-body');
     details.map(detail=>{
-        console.log(detail)
         document.getElementById('foodModal').innerText= detail.strMeal
         foodBody.innerHTML= `
         <img class = 'img-fluid' src="${detail.strMealThumb}">
@@ -58,4 +58,3 @@ const displayFoodModal = (details)=>{
     })
     
 }
-loadFoodDetails()
