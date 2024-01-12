@@ -1,0 +1,16 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+footer h4{
+    font-weight: 600;
+}
+#banner{
+    background: linear-gradient( #100F0FA3 70%, #100F0FA3 70%), url("../images/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 155px 0;
+}
+.card-text{
+    color: #706F6F;
+}

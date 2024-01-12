@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Db</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-body-tertiary py-3">
+            <div class="container">
+              <a class="navbar-brand"><img src="./images/tasty hut.png" alt=""></a>
+              <form class="d-flex" role="search">
+                <button class="btn btn-warning text-capitalize text-black fw-bold" type="submit">sign up</button>
+              </form>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section id="banner" class="mb-5 pb-4">
+            <div class="container text-center bannet-text text-white">
+                <h1 class="text-capitalize display-5 col-5 col-xxl-4 mx-auto fw-bold mb-4">taste our delicious best foods</h1>
+                <p class="col-6 mx-auto mb-4 pb-2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
+                <div class="input-group mb-3 w-50 mx-auto">
+                    <input id="searchMeal" type="text" class="form-control" placeholder="search any food" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button onclick="searchText()" class="btn btn-warning text-capitalize fw-bold" type="button" id="button-addon2">search</button>
+                </div> 
+            </div>  
+        </section>
+        <section class="container">
+          <h1 class="text-center text-capitalize fw-semibold display-5 py-5">your favourite food</h1>
+          <div id="food-container" class="row row-cols-1 row-cols-md-2 gx-4 gy-3 mb-5">
+            <div class="col px-4">
+                <div class="row align-items-center border rounded-2 shadow-sm">
+                  <img src="./images/Rectangle 3980.png" class="img-fluid rounded-start col-md-4 ps-0" alt="...">
+                  <div class="col-md-6">
+                      <div class="card-body">
+                      <h5 class="text-capitalize fw-bold mb-3">chicken handi</h5>
+                      <p class="card-text mb-4">There are many variations of passages of available, but the majority have suffered</p>
+                      <button onclick="loadFoodDetails()" type="button" class="btn btn-link text-warning fw-bold text-capitalize ps-0 pt-0" data-bs-toggle="modal" data-bs-target="#foodModalDetail">
+                          view details
+                      </button>                    
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col px-4">
+                <div class="row align-items-center border rounded-2 shadow-sm">
+                  <img src="./images/Rectangle 3981.png" class="img-fluid rounded-start col-md-4 ps-0" alt="...">
+                  <div class="col-md-6">
+                      <div class="card-body">
+                      <h5 class="text-capitalize fw-bold mb-3">chicken handi</h5>
+                      <p class="card-text mb-4">There are many variations of passages of available, but the majority have suffered</p>
+                      <button onclick="loadFoodDetails()" type="button" class="btn btn-link text-warning fw-bold text-capitalize ps-0 pt-0" data-bs-toggle="modal" data-bs-target="#foodModalDetail">
+                          view details
+                      </button>                    
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col px-4">
+                <div class="row align-items-center border rounded-2 shadow-sm">
+                  <img src="./images/Rectangle 3982.png" class="img-fluid rounded-start col-md-4 ps-0" alt="...">
+                  <div class="col-md-6">
+                      <div class="card-body">
+                      <h5 class="text-capitalize fw-bold mb-3">chicken handi</h5>
+                      <p class="card-text mb-4">There are many variations of passages of available, but the majority have suffered</p>
+                      <button onclick="loadFoodDetails()" type="button" class="btn btn-link text-warning fw-bold text-capitalize ps-0 pt-0" data-bs-toggle="modal" data-bs-target="#foodModalDetail">
+                          view details
+                      </button>                    
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col px-4">
+                <div class="row align-items-center border rounded-2 shadow-sm">
+                  <img src="./images/Rectangle 3983.png" class="img-fluid rounded-start col-md-4 ps-0" alt="...">
+                  <div class="col-md-6">
+                      <div class="card-body">
+                      <h5 class="text-capitalize fw-bold mb-3">chicken handi</h5>
+                      <p class="card-text mb-4">There are many variations of passages of available, but the majority have suffered</p>
+                      <button onclick="loadFoodDetails()" type="button" class="btn btn-link text-warning fw-bold text-capitalize ps-0 pt-0" data-bs-toggle="modal" data-bs-target="#foodModalDetail">
+                          view details
+                      </button>                    
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col px-4">
+                <div class="row align-items-center border rounded-2 shadow-sm">
+                  <img src="./images/Rectangle 3984.png" class="img-fluid rounded-start col-md-4 ps-0" alt="...">
+                  <div class="col-md-6">
+                      <div class="card-body">
+                      <h5 class="text-capitalize fw-bold mb-3">chicken handi</h5>
+                      <p class="card-text mb-4">There are many variations of passages of available, but the majority have suffered</p>
+                      <button onclick="loadFoodDetails()" type="button" class="btn btn-link text-warning fw-bold text-capitalize ps-0 pt-0" data-bs-toggle="modal" data-bs-target="#foodModalDetail">
+                          view details
+                      </button>                    
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col px-4">
+                <div class="row align-items-center border rounded-2 shadow-sm">
+                  <img src="./images/Rectangle 3985.png" class="img-fluid rounded-start col-md-4 ps-0" alt="...">
+                  <div class="col-md-6">
+                      <div class="card-body">
+                      <h5 class="text-capitalize fw-bold mb-3">chicken handi</h5>
+                      <p class="card-text mb-4">There are many variations of passages of available, but the majority have suffered</p>
+                      <button onclick="loadFoodDetails()" type="button" class="btn btn-link text-warning fw-bold text-capitalize ps-0 pt-0" data-bs-toggle="modal" data-bs-target="#foodModalDetail">
+                          view details
+                      </button>                    
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center py-5">
+            <button onclick="loadFood('')" type="button" class="btn btn-warning text-center text-capitalize fw-bold">show all</button> 
+          </div>
+        </section>
+        <section>
+          <div class="modal fade" id="foodModalDetail" tabindex="-1" aria-labelledby="foodModalDetail" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="foodModal">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="food-modal-body" class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+    </main>
+    <footer class="container">
+      <section class="row align-items-center text-capitalize mb-3">
+        <div class="col-md-2">
+          <h4>section</h4>
+          <ul class="list-unstyled mb-0">
+            <li>Home</li>
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>FAQs</li>
+            <li>About</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4>section</h4>
+          <ul class="list-unstyled">
+            <li>UIUX Design</li>
+            <li>Product Design</li>
+            <li>Back End Develope</li>
+            <li>Front End Developer</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4>Resource</h4>
+          <ul class="list-unstyled">
+            <li>FAQ</li>
+            <li>Support</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <h4>Subscribe to our newsletter</h4>
+          <p>There are many variations of passages of available, but the majority have suffered</p>
+          <div class="d-flex align-items-center">
+            <input type="text" placeholder="email address" class="rounded text-capitalize px-2 py-1 me-2">
+            <button class="btn btn-warning text-capitalize fw-bold">subscribe</button>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./js/mealdb.js"></script>
+</body>
+</html>
